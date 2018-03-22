@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>DevExtreme jQuery Example</title>
+    <!-- DevExtreme dependencies -->
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.1.0.min.js"></script>
+    <!-- DevExtreme themes -->
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/17.2.7/css/dx.common.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/17.2.7/css/dx.light.css" />
+
+    <!-- Globalize scripts -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.5/cldr.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.5/cldr/event.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.5/cldr/supplemental.min.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/1.0.0/globalize.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/1.0.0/globalize/message.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/1.0.0/globalize/number.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/1.0.0/globalize/currency.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/1.0.0/globalize/date.js"></script>
+
+    <!-- Dev Extreme -->
+    <script type="text/javascript" src="dx.all.debug.js"></script>
+</head>
+
+<body>
+
+
+
+
+<div class="dx-field">
+    <div class="dx-field-label">Default from Example Page</div>
+    <div class="dx-field-value">
+        <div id="defaultFromExamplePage"></div>
+    </div>
+</div>
+
+<div class="dx-field">
+    <div class="dx-field-label">9's as mask</div>
+    <div class="dx-field-value">
+        <div id="ninesMask"></div> <dx-text-box mask="999999999-99" maskChar="_"></dx-text-box>
+    </div>
+</div>
+
+<div class="dx-field">
+    <div class="dx-field-label">#'s as mask</div>
+    <div class="dx-field-value">
+        <div id="poundMask"></div> <dx-text-box mask="#########-##" maskChar="_"></dx-text-box>
+    </div>
+</div>
+
+<div class="dx-field">
+    <div class="dx-field-label">0's as mask</div>
+    <div class="dx-field-value">
+        <div id="zerosMask"></div> <dx-text-box mask="000000000-00" maskChar="_"></dx-text-box>
+    </div>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>Masking element </th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td> 0 </td>
+        <td> A digit</td>
+    </tr>
+    <tr>
+        <td> 9 </td>
+        <td> A digit or a space</td>
+    </tr>
+    <tr>
+        <td> # </td>
+        <td> A digit, a space, "+" or "-" sign.</td>
+    </tr>
+    <tr>
+        <td> L </td>
+        <td> A literal.</td>
+    </tr>
+    <tr>
+        <td> C </td>
+        <td> Any character except space.</td>
+    </tr>
+    <tr>
+        <td> c </td>
+        <td> Any character.</td>
+    </tr>
+    <tr>
+        <td> A </td>
+        <td> An alphanumeric.</td>
+    </tr>
+    <tr>
+        <td> a </td>
+        <td> An alphanumeric or a space.</td>
+    </tr>
+    </tbody>
+</table>
+
+<script>
+    $("#defaultFromExamplePage").dxTextBox({
+        "mask": "+1 (X00) 000-0000",
+        "width":  200,
+        "showClearButton": true
+    });
+
+    $("#ninesMask").dxTextBox({
+        "mask": "999999999-99",
+        "width":  200,
+        "showClearButton": true
+    });
+
+    $("#poundMask").dxTextBox({
+        "mask": "#########-##",
+        "width":  200,
+        "showClearButton": true
+    });
+
+    $("#zerosMask").dxTextBox({
+        "mask": "000000000-00",
+        "width":  200,
+        "showClearButton": true
+    });
+
+</script>
+</body>
+</html>
